@@ -1,0 +1,86 @@
+.container {
+  padding: 10px;
+  background-color: black;
+}
+header {
+  margin-top: -10px;
+  position: fixed;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.flex-container > div {
+  box-shadow: 1px 1px 5px 1px white;
+  padding: 10px;
+  width: 20%;
+  margin: 2rem;
+  opacity: 1;
+  background-color: white;
+  border-radius: 10px;
+}
+.flex-container > div:hover img {
+  opacity: 0.5;
+}
+.productTitle h3 {
+  text-align: center;
+  margin: 10px;
+  color: white;
+  background-color: black;
+  outline: 10px solid black;
+}
+.image {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  padding: 1px;
+}
+.description {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 0px;
+}
+.flex-container > div:hover .overlay {
+  opacity: 1;
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  opacity: 0;
+  transition: linear 0.5s ease;
+  width: 50%;
+}
+img .booked {
+  z-index: 1;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .flex-container > div {
+    flex: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .flex-container > div {
+    flex: 100%;
+  }
+  .header {
+    font-size: 12px;
+  }
+  .header div {
+    margin-top: 0px;
+  }
+}
